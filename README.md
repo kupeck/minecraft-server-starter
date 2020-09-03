@@ -1,0 +1,1 @@
+# kupecks-mc-server-starter
