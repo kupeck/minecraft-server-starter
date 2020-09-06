@@ -30,7 +30,7 @@ timeout /T 3
 cls
 echo +++++++++++++++++++++++++++++++++++++++++++++
 echo I                                           I
-echo I   1 = Close wondow                        I
+echo I   1 = Close window                        I
 echo I   2 = Start the server again              I
 echo I   3 = Change name of .jar file            I
 echo I                                           I
