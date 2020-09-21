@@ -8,37 +8,81 @@ echo I   Some rights reserved                    I
 echo I                                           I
 echo +++++++++++++++++++++++++++++++++++++++++++++
 timeout /T 1
-goto :jmeno
+goto :firsttime
 
-:jmeno
+:firsttime
 cls
 echo +++++++++++++++++++++++++++++++++++++++++++++
 echo I                                           I
-echo I   PHere write name of your .jar file      I
+echo I   First time?                             I
+echo I   1 = New setup                           I
+echo I   2 = Load from previous                  I
+echo I                                           I
+echo +++++++++++++++++++++++++++++++++++++++++++++
+set /P _firsttime= Please enter an input: 
+if "%_firsttime%"=="1" goto :setup
+if "%_firsttime%"=="2" goto :load
+goto :firsttime
+
+:load
+set /P _jarname=<startbat/jarname.txt
+set /P _Xmx=<startbat/xmxint.txt
+set /P _Xms=<startbat/xmsint.txt
+goto :start
+
+:setup
+cls
+echo +++++++++++++++++++++++++++++++++++++++++++++
+echo I                                           I
+echo I   Here write name of your .jar file       I
 echo I   (without .jar)                          I
 echo I   and than press return/enter             I
 echo I                                           I
 echo +++++++++++++++++++++++++++++++++++++++++++++
 set /P _jarname= Please enter an input: 
+cls
+echo +++++++++++++++++++++++++++++++++++++++++++++
+echo I                                           I
+echo I   How much max ram MB allocated?          I
+echo I   (without M)                             I
+echo I   and than press return/enter             I
+echo I                                           I
+echo +++++++++++++++++++++++++++++++++++++++++++++
+set /P _Xmx= Please enter an input: 
+cls
+echo +++++++++++++++++++++++++++++++++++++++++++++
+echo I                                           I
+echo I   How much min ram MB allocated?          I
+echo I   (without M)                             I
+echo I   and than press return/enter             I
+echo I                                           I
+echo +++++++++++++++++++++++++++++++++++++++++++++
+set /P _Xms= Please enter an input: 
+if exist "startbat" goto :save
+mkdir "startbat"
+:save 
+echo %_jarname%> startbat/jarname.txt
+echo %_Xmx%> startbat/xmxint.txt
+echo %_Xms%> startbat/xmsint.txt
 goto :start
 
 :start
 cls
 java -Xmx6144M -Xms3072M -jar "%_jarname%".jar -nogui
-timeout /T 3
+timeout /T 120
 :vyber
 cls
 echo +++++++++++++++++++++++++++++++++++++++++++++
 echo I                                           I
 echo I   1 = Close window                        I
-echo I   2 = Start the server again              I
-echo I   3 = Change name of .jar file            I
+echo I   2 = Start the server again (5 = fast)   I
+echo I   3 = New setup                           I
 echo I                                           I
 echo +++++++++++++++++++++++++++++++++++++++++++++
 set /P _vybernumber= Please enter an input: 
 if "%_vybernumber%"=="1" goto :konec
 if "%_vybernumber%"=="2" goto :restart
-if "%_vybernumber%"=="3" goto :jmeno
+if "%_vybernumber%"=="3" goto :setup
 if "%_vybernumber%"=="5" goto :restartshort
 goto :vyber
 
