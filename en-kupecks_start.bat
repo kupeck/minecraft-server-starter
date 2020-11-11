@@ -236,7 +236,6 @@ echo I                                           I
 echo I                                           I
 echo +-------------------------------------------+
 timeout /T 1
-:restartshort
 cls
 echo +-------------------------------------------+
 echo I                                           I
@@ -255,6 +254,7 @@ echo I                                           I
 echo I                                           I
 echo +-------------------------------------------+
 timeout /T 1
+:restartshort
 cls
 echo +-------------------------------------------+
 echo I                                           I
