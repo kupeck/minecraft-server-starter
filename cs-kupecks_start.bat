@@ -85,7 +85,7 @@ set /P _vybernumber= Please enter an input:
 if "%_vybernumber%"=="1" goto :konec
 if "%_vybernumber%"=="2" goto :restart
 if "%_vybernumber%"=="3" goto :setup
-if "%_vybernumber%"=="4" start microsoft-edge:"https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+if "%_vybernumber%"=="4" start microsoft-edge:"https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?modestbranding=1&rel=0&controls=0&disablekb=1"
 if "%_vybernumber%"=="5" goto :restartshort
 goto :vyber
 
