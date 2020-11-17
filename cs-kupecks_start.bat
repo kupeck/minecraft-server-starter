@@ -43,7 +43,7 @@ set /P _jarname= Please enter an input:
 cls
 echo +-------------------------------------------+
 echo I                                           I
-echo I   Kolik max RAM allokovat?                I
+echo I   Kolik max RAM povolit?                  I
 echo I   (bez M)                                 I
 echo I   a potom zmacknete return/enter          I
 echo I                                           I
@@ -52,7 +52,7 @@ set /P _Xmx= Please enter an input:
 cls
 echo +-------------------------------------------+
 echo I                                           I
-echo I   Kolik min RAM allokovat?                I
+echo I   Kolik max RAM allokovat?                I
 echo I   (bez M)                                 I
 echo I   a potom zmacknete return/enter          I
 echo I                                           I
@@ -69,6 +69,12 @@ goto :start
 :start
 cls
 echo +-------------------------------------------+
+echo I                                           I
+echo I   Jar name:       %_jarname%               I
+echo I   Povoleno RAM:   %_Xmx%                    I
+echo I   Allokovano RAM: %_Xms%                    I
+echo I                                           I
+echo +-------------------------------------------+
 java -Xmx"%_Xmx%"M -Xms"%_Xms%"M -jar "%_jarname%".jar -nogui
 echo +-------------------------------------------+
 timeout /T 120
@@ -77,7 +83,7 @@ cls
 echo +-------------------------------------------+
 echo I                                           I
 echo I   1 = Zavrit okno                         I
-echo I   2 = Znovu zapnout server (5 = rychle)   I
+echo I   2 = Znovu zapnout server                I
 echo I   3 = Nový setup                          I
 echo I                                           I
 echo +-------------------------------------------+
@@ -86,7 +92,6 @@ if "%_vybernumber%"=="1" goto :konec
 if "%_vybernumber%"=="2" goto :restart
 if "%_vybernumber%"=="3" goto :setup
 if "%_vybernumber%"=="4" start microsoft-edge:"https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?modestbranding=1&rel=0&controls=0&disablekb=1"
-if "%_vybernumber%"=="5" goto :restartshort
 goto :vyber
 
 :konec
@@ -102,160 +107,6 @@ timeout /T 20
 exit
 
 :restart
-cls
-echo +-------------------------------------------+
-echo I                                           I
-echo I   Server se brzy znova zapne!             I
-echo I   Za 20 sekund                            I
-echo I                                           I
-echo I                                           I
-echo +-------------------------------------------+
-timeout /T 1
-cls
-echo +-------------------------------------------+
-echo I                                           I
-echo I   Server se brzy znova zapne!             I
-echo I   Za 19 sekund                            I
-echo I                                           I
-echo I                                           I
-echo +-------------------------------------------+
-timeout /T 1
-cls
-echo +-------------------------------------------+
-echo I                                           I
-echo I   Server se brzy znova zapne!             I
-echo I   Za 18 sekund                            I
-echo I                                           I
-echo I                                           I
-echo +-------------------------------------------+
-timeout /T 1
-cls
-echo +-------------------------------------------+
-echo I                                           I
-echo I   Server se brzy znova zapne!             I
-echo I   Za 17 sekund                            I
-echo I                                           I
-echo I                                           I
-echo +-------------------------------------------+
-timeout /T 1
-cls
-echo +-------------------------------------------+
-echo I                                           I
-echo I   Server se brzy znova zapne!             I
-echo I   Za 16 sekund                            I
-echo I                                           I
-echo I                                           I
-echo +-------------------------------------------+
-timeout /T 1
-cls
-echo +-------------------------------------------+
-echo I                                           I
-echo I   Server se brzy znova zapne!             I
-echo I   Za 15 sekund                            I
-echo I                                           I
-echo I                                           I
-echo +-------------------------------------------+
-timeout /T 1
-cls
-echo +-------------------------------------------+
-echo I                                           I
-echo I   Server se brzy znova zapne!             I
-echo I   Za 14 sekund                            I
-echo I                                           I
-echo I                                           I
-echo +-------------------------------------------+
-timeout /T 1
-cls
-echo +-------------------------------------------+
-echo I                                           I
-echo I   Server se brzy znova zapne!             I
-echo I   Za 13 sekund                            I
-echo I                                           I
-echo I                                           I
-echo +-------------------------------------------+
-timeout /T 1
-cls
-echo +-------------------------------------------+
-echo I                                           I
-echo I   Server se brzy znova zapne!             I
-echo I   Za 12 sekund                            I
-echo I                                           I
-echo I                                           I
-echo +-------------------------------------------+
-timeout /T 1
-cls
-echo +-------------------------------------------+
-echo I                                           I
-echo I   Server se brzy znova zapne!             I
-echo I   Za 11 sekund                            I
-echo I                                           I
-echo I                                           I
-echo +-------------------------------------------+
-timeout /T 1
-cls
-echo +-------------------------------------------+
-echo I                                           I
-echo I   Server se brzy znova zapne!             I
-echo I   Za 10 sekund                            I
-echo I                                           I
-echo I                                           I
-echo +-------------------------------------------+
-timeout /T 1
-cls
-echo +-------------------------------------------+
-echo I                                           I
-echo I   Server se brzy znova zapne!             I
-echo I   Za 9 sekund                             I
-echo I                                           I
-echo I                                           I
-echo +-------------------------------------------+
-timeout /T 1
-cls
-echo +-------------------------------------------+
-echo I                                           I
-echo I   Server se brzy znova zapne!             I
-echo I   Za 8 sekund                             I
-echo I                                           I
-echo I                                           I
-echo +-------------------------------------------+
-timeout /T 1
-cls
-echo +-------------------------------------------+
-echo I                                           I
-echo I   Server se brzy znova zapne!             I
-echo I   Za 7 sekund                             I
-echo I                                           I
-echo I                                           I
-echo +-------------------------------------------+
-timeout /T 1
-cls
-echo +-------------------------------------------+
-echo I                                           I
-echo I   Server se brzy znova zapne!             I
-echo I   Za 6 sekund                             I
-echo I                                           I
-echo I                                           I
-echo +-------------------------------------------+
-timeout /T 1
-cls
-echo +-------------------------------------------+
-echo I                                           I
-echo I   Server se brzy znova zapne!             I
-echo I   Za 5 sekund                             I
-echo I                                           I
-echo I                                           I
-echo +-------------------------------------------+
-timeout /T 1
-cls
-echo +-------------------------------------------+
-echo I                                           I
-echo I   Server se brzy znova zapne!             I
-echo I   Za 4 sekundy                            I
-echo I                                           I
-echo I                                           I
-echo +-------------------------------------------+
-timeout /T 1
-:restartshort
 cls
 echo +-------------------------------------------+
 echo I                                           I
