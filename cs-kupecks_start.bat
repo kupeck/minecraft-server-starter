@@ -82,7 +82,7 @@ timeout /T 120
 cls
 echo +-------------------------------------------+
 echo I                                           I
-echo I   1 = Zavrit okno                         I
+echo I   1 = Ukoncit program                     I
 echo I   2 = Znovu zapnout server                I
 echo I   3 = Nový setup                          I
 echo I                                           I
@@ -104,7 +104,7 @@ echo I                                           I
 echo I                                           I
 echo +-------------------------------------------+
 timeout /T 20
-exit
+goto :exit
 
 :restart
 cls
@@ -135,3 +135,5 @@ echo I                                           I
 echo +-------------------------------------------+
 timeout /T 1
 goto :start
+
+:exit
