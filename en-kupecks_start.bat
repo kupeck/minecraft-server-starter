@@ -137,3 +137,4 @@ timeout /T 1
 goto :start
 
 :exit
+cls
