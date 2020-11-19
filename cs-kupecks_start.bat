@@ -66,7 +66,7 @@ echo %_Xmx%> startbat/xmxint.txt
 echo %_Xms%> startbat/xmsint.txt
 goto :start
 
-:start
+:2ndstart
 cls
 echo +-------------------------------------------+
 echo I                                           I
@@ -89,7 +89,7 @@ echo I                                           I
 echo +-------------------------------------------+
 set /P _vybernumber= Please enter an input: 
 if "%_vybernumber%"=="1" goto :konec
-if "%_vybernumber%"=="2" goto :restart
+if "%_vybernumber%"=="2" goto :start
 if "%_vybernumber%"=="3" goto :setup
 if "%_vybernumber%"=="4" start microsoft-edge:"https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?modestbranding=1&rel=0&controls=0&disablekb=1"
 goto :vyber
@@ -106,7 +106,7 @@ echo +-------------------------------------------+
 timeout /T 20
 goto :exit
 
-:restart
+:start
 cls
 echo +-------------------------------------------+
 echo I                                           I
@@ -134,7 +134,7 @@ echo I                                           I
 echo I                                           I
 echo +-------------------------------------------+
 timeout /T 1
-goto :start
+goto :2ndstart
 
 :exit
 cls
