@@ -52,7 +52,7 @@ set /P _Xmx= Please enter an input:
 cls
 echo +-------------------------------------------+
 echo I                                           I
-echo I   Kolik max RAM allokovat?                I
+echo I   Kolik min RAM allokovat?                I
 echo I   (bez M)                                 I
 echo I   a potom zmacknete return/enter          I
 echo I                                           I
