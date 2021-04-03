@@ -6,6 +6,8 @@ Since i can speak czech and english i am developing the app and than translating
 
 If you want to download the start.bat file, just head to the releases tab for download link
 
+**__CS version is not being updated!__**
+
 ## Instructions:
 
 1. Download your prefered server .jar for example [Paper MC](https://papermc.io/downloads)
