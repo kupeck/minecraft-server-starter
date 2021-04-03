@@ -26,7 +26,7 @@ echo     Allocated RAM: %_Xms%
 java -Xmx"%_Xmx%"M -Xms"%_Xms%"M -jar "%_jarname%".jar -nogui
 echo +-------------------------------------------+
 timeout /T 7
-goto :Start
+goto :load
 
 :start
 cls
@@ -50,4 +50,4 @@ echo +-------------------------------------------+
 echo     Server will start soon!                  
 echo     In 1 second                             
 timeout /T 1
-goto :load
+goto :2ndstart
