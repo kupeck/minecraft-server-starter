@@ -25,7 +25,6 @@ echo     Allowed RAM:   %_Xmx%
 echo     Allocated RAM: %_Xms%                      
 java -Xmx"%_Xmx%"M -Xms"%_Xms%"M -jar "%_jarname%".jar -nogui
 echo +-------------------------------------------+
-timeout /T 7
 goto :load
 
 :start
