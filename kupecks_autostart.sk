@@ -1,4 +1,21 @@
-#a Skript script as a plugin for autostart
+#TAB integration:
+# stop:
+#   style: "PROGRESS"
+#   color: "RED"
+#   progress: "100"
+#   text: "&cServer will stop soon!"
+# reboot:
+#   style: "PROGRESS"
+#   color: "RED"
+#   progress: "100"
+#   text: "&cServer will restart soon!"
+# shutdown:
+#   style: "PROGRESS"
+#   color: "RED"
+#   progress: "100"
+#   text: "&cServer will shutdown soon!"
+#
+#Skript script:
 
 command /shutdown:
 	permission: skript.shutdown
