@@ -1,0 +1,41 @@
+#a Skript script as a plugin for autostart
+
+command /shutdown:
+	permission: skript.shutdown
+	description: Stops the server with a notice to the players
+	trigger:
+		write "shutdown" at line 1 to file "startbat/skriptcom.txt"
+		make console execute command "/tab announce bar shutdown 10"
+		make console execute command "/bc &6&lServer will restart soon!"
+		make console execute command "/discordsrv broadcast :warning: **Server will restart**"
+		make console execute command "/save-all"
+		wait 5 seconds
+		make console execute command "/save-all"
+		wait 5 seconds
+		make console execute command "/stop"
+command /reboot:
+	permission: skript.shutdown
+	description: Stops the server with a notice to the players
+	trigger:
+		write "reboot" at line 1 to file "startbat/skriptcom.txt"
+		make console execute command "/tab announce bar shutdown 10"
+		make console execute command "/bc &6&lServer will stop soon!"
+		make console execute command "/discordsrv broadcast :warning: **Server will stop**"
+		make console execute command "/save-all"
+		wait 5 seconds
+		make console execute command "/save-all"
+		wait 5 seconds
+		make console execute command "/stop"
+command /poweroff:
+	permission: skript.shutdown
+	description: Stops the server with a notice to the players
+	trigger:
+		write "poweroff" at line 1 to file "startbat/skriptcom.txt"
+		make console execute command "/tab announce bar shutdown 10"
+		make console execute command "/bc &6&lServer will shutdown soon!"
+		make console execute command "/discordsrv broadcast :warning: **Server will shutdown**"
+		make console execute command "/save-all"
+		wait 5 seconds
+		make console execute command "/save-all"
+		wait 5 seconds
+		make console execute command "/stop"
