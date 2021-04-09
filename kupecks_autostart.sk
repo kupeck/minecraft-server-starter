@@ -14,7 +14,7 @@ command /shutdown:
 		wait 5 seconds
 		make console execute command "/stop"
 command /reboot:
-	permission: skript.shutdown
+	permission: skript.reboot
 	description: Stops the server with a notice to the players
 	trigger:
 		write "reboot" at line 1 to file "startbat/skriptcom.txt"
@@ -27,7 +27,7 @@ command /reboot:
 		wait 5 seconds
 		make console execute command "/stop"
 command /poweroff:
-	permission: skript.shutdown
+	permission: skript.poweroff
 	description: Stops the server with a notice to the players
 	trigger:
 		write "poweroff" at line 1 to file "startbat/skriptcom.txt"
