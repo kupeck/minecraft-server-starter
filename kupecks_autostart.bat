@@ -1,5 +1,5 @@
 @echo off
-cls
+echo --cls--
 echo +-------------------------------------------+
 echo +-----------------Copyright-----------------+
 echo +-------------------------------------------+
@@ -7,7 +7,7 @@ echo     Copyright start.bat
 echo     kupeck#9974 2020                         
 echo     Some rights reserved                     
 timeout /T 1
-echo "empty"> startbat/skriptcom.txt
+echo program start> startbat/skriptcom.txt
 goto :load
 
 :load
@@ -17,7 +17,7 @@ set /P _Xms=<startbat/xmsint.txt
 goto :start
 
 :2ndstart
-cls
+echo --cls--
 echo +-------------------------------------------+
 echo +-----------------Your setup----------------+
 echo +-------------------------------------------+
@@ -26,28 +26,28 @@ echo     Allowed RAM:   %_Xmx%
 echo     Allocated RAM: %_Xms%                      
 java -Xmx"%_Xmx%"M -Xms"%_Xms%"M -jar "%_jarname%".jar -nogui
 echo +-------------------------------------------+
-set /P _skriptcom=<startbat/skriptcom.txt
+set /P0 _skriptcom=<startbat/skriptcom.txt
 if "%_skriptcom%"=="reboot" goto :load
 if "%_skriptcom%"=="shutdown" goto :end
 if "%_skriptcom%"=="poweroff" goto :shutdown
 goto :load
 
 :start
-cls
+echo --cls--
 echo +-------------------------------------------+
 echo +------------------Starting-----------------+
 echo +-------------------------------------------+
 echo     Server will start soon!                  
 echo     In 3 seconds                             
 timeout /T 1
-cls
+echo --cls--
 echo +-------------------------------------------+
 echo +------------------Starting-----------------+
 echo +-------------------------------------------+
 echo     Server will start soon!                  
 echo     In 2 seconds                             
 timeout /T 1
-cls
+echo --cls--
 echo +-------------------------------------------+
 echo +------------------Starting-----------------+
 echo +-------------------------------------------+
