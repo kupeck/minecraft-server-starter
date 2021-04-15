@@ -7,7 +7,7 @@ echo     Copyright start.bat
 echo     kupeck#9974 2020                         
 echo     Some rights reserved                     
 timeout /T 1
-echo program start> startbat/skriptcom.txt
+echo. 2>startbat/skriptcom.txt
 goto :load
 
 :load
