@@ -1,33 +1,21 @@
-# kupeck's custom minecraft start.bat
+# This is my custom start.bat file
+Feel free to use and modify (**not** distribute)
 
-This is my special start.bat file to start your minecraft server, it can be used with any software like Spigot, Paper or Vanilla.
+## Instructions
 
-If you want to download the start.bat file, just head to the [releases](https://github.com/kupeck/minecraft-server-starter/releases) tab for the download link
+1. Copy both files to your minecraft server folder (both ending in .bat)
 
-## Instructions:
+2. (Optional) If you want custom skript /shutdown and /reboot command, place the .sk file into your skripts folder (skript plugin requiered)\*
 
-1. Download your prefered server .jar for example [Paper MC](https://papermc.io/downloads)
+3. Open kupecks_setup.bat to setup your config
 
-2. Download the newest [release](https://github.com/kupeck/minecraft-server-starter/releases) of this program
+4. After you're done with that go into your spigot.yml file and chage line 16 to `  restart-script: ./kupecks_starter.bat`
 
-3. Put them in the same folder
+5. (Optional) Now you can set it up so that kupecks_starter.bat starts with your computer
 
-4. Setup your server according to the instructions on screen
+6. And you're done, now to start you server just open the kupecks_starter.bat file!\*\*
 
-5. Enjoy!
-
-**Note:** Only on windows, linux version coming later
-
-### If you want to play with your friends:
-
-1. You need a LAN share program, like Hamachi or Radmin VPN
-
-2. Once you have your chosen program installed on your computer, setup a network, usually it's in the network section at the top of the window
-
-3. Your friends wiil need the same program as you, than share the name of the network with tem and let them connect
-
-4. Now, your friends will connect to the server using your IP shown in your program od choise followed by :25575
-
-5. Enjoy! If this doesn't work you can contact me at kupeck#9974 on discord
-
-**Note:** This is not requiered, if you know what you are doing, you can do it a more complicated way, like with a public IP for your ISP, but I'll leave that upt to you
+### Notes
+\* To stop your server type /shutdown to restart type /reboot
+\*\* To stop your server type /stop, to restart type /restart
+There are some lines in the .sk skript in czech, by default they're disabled so you don't need to worry
