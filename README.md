@@ -9,7 +9,7 @@ Feel free to use and modify (**not** distribute)
 
 3. Open kupecks_setup.bat to setup your config
 
-4. After you're done with that go into your spigot.yml file and chage line 16 to `  restart-script: ./kupecks_starter.bat`
+4. After you're done with that go into your spigot.yml file and chage line 16 to `  restart-script: kupecks_starter.bat`
 
 5. (Optional) Now you can set it up so that kupecks_starter.bat starts with your computer
 

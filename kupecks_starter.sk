@@ -4,12 +4,12 @@ command /shutdown:
 	description: Stops the server with a notice for the players
 	trigger:
 		make console execute command "/bc &6&lServer will stop soon!"
-        #make console execute command "/bc §6§l Server bude brzy zastaven!"
+		#make console execute command "/bc §6§l Server bude brzy zastaven!"
 		make console execute command "/discordsrv broadcast :warning: **Server will stop**"
-        make console execute command "/dynmap sendtoweb Server will stop"
+		make console execute command "/dynmap sendtoweb Server will stop"
 		make console execute command "/save-all"
 		wait 10 seconds
-        make console execute command "/miencraft:kick @a §6§lServer was stopped.\nWe apologize for any inconvenience caused!"
+		make console execute command "/miencraft:kick @a §6§lServer was stopped.\nWe apologize for any inconvenience caused!"
 		#make console execute command "/minecraft:kick @a §6§lServer byl zastaven.\nOmlouváme se za způsobené nepříjemnosti!"
 		make console execute command "/save-all"
 		wait 3 seconds
@@ -21,10 +21,10 @@ command /reboot:
 		make console execute command "/bc &6&lServer will restart soon!"
 		#make console execute command "/bc &6&lServer bude brzy restartován!"
 		make console execute command "/discordsrv broadcast :warning: **Server will restart**"
-        make console execute command "/dynmap sendtoweb Server will restart"
+		make console execute command "/dynmap sendtoweb Server will restart"
 		make console execute command "/save-all"
 		wait 10 seconds
-        make console execute command "/minecraft:kick @a §6§lServer is restarting.\nGive us a minute and we'll be right back!"
+		make console execute command "/minecraft:kick @a §6§lServer is restarting.\nGive us a minute and we'll be right back!"
 		#make console execute command "/minecraft:kick @a §6§lServer se právě restartuje.\nDejte nám minutku a budeme zpět!"
 		make console execute command "/save-all"
 		wait 3 seconds
